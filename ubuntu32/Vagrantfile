@@ -11,6 +11,9 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :itamae do |conf|
     conf.sudo = true
-    conf.recipes = ['../submodules/ubuntu-provisioning/cookbooks/development.rb']
+    conf.recipes = %w(
+      ../submodules/ubuntu-provisioning/cookbooks/development.rb
+      ../submodules/ubuntu-provisioning/cookbooks/samba/default.rb
+     )
   end
 end
