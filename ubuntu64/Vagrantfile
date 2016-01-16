@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
     conf.shell   = "/bin/bash"
     conf.json    = "../submodules/ubuntu-provisioning/nodes/vagrant.json"
     conf.recipes = %w(
-      '../submodules/ubuntu-provisioning/roles/common.rb'
+      ../submodules/ubuntu-provisioning/roles/common.rb
       ../submodules/ubuntu-provisioning/cookbooks/samba/default.rb
     )
   end
