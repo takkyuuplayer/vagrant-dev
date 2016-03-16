@@ -7,3 +7,4 @@ submodule-setup:
 
 vagrant-setup:
 	vagrant plugin install vagrant-itamae
+	vagrant plugin install sahara
