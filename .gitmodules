@@ -1,3 +1,0 @@
-[submodule "submodules/ubuntu-provisioning"]
-	path = submodules/ubuntu-provisioning
-	url = git@github.com:takkyuuplayer/ubuntu-provisioning.git
