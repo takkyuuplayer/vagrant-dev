@@ -1,22 +1,18 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
-Vagrant.configure(2) do |config|
-  config.vm.box = "ubuntu/trusty64"
-
-  config.vm.hostname = "ubuntu64"
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
   config.vm.network "private_network", ip: "192.168.33.101"
 
-  config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "1024"]
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
   end
-
 
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y ruby2.0 ruby2.0-dev git
-    sudo gem2.0 i bundler --no-rdoc --no-ri
+    sudo apt-get install -y ruby2.3 ruby2.3-dev git make
+    sudo gem2.3 i bundler --no-rdoc --no-ri
   SHELL
 
 end
