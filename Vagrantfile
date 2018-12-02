@@ -14,4 +14,10 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y ruby2.5 ruby2.5-dev git make
     sudo gem2.5 i bundler --no-rdoc --no-ri
   SHELL
+
+  config.vm.provision "ansible_local" do |ansible|
+    ansible.install_mode = "pip"
+    ansible.playbook = "./ansible/hello.yml"
+    ansible.version = "latest"
+  end
 end
