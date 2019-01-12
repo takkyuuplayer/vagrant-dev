@@ -1,3 +1,4 @@
 ---
 - import_role:
     name: "geerlingguy.docker"
+- import_tasks: "aws-cli.yml"
