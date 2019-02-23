@@ -6,5 +6,5 @@
   pip:
     name:
       - req
-      - ansible-container[docker,k8s]
+      - ansible-container[docker]
     state: latest
