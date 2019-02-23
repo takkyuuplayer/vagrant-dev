@@ -1,0 +1,12 @@
+---
+- name: Install essential packages.
+  package:
+    state: latest
+    name:
+      - build-essential
+      - curl
+      - ntp
+      - tmpreaper
+      - tzdata
+      - unzip
+      - wget

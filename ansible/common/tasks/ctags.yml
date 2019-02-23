@@ -1,17 +1,16 @@
 ---
 - name: Install build essentials
   package:
-      state: latest
-      name: "{{ item }}"
-  loop:
-    - dh-autoreconf
-    - pkg-config
+    state: latest
+    name:
+      - dh-autoreconf
+      - pkg-config
 - name: Clone ctags repository
   git:
     dest: /tmp/ctags
     depth: 1
     repo: https://github.com/universal-ctags/ctags
-- name: 'Install universal-ctags'
+- name: "Install universal-ctags"
   shell: |
     ./autogen.sh
     ./configure
