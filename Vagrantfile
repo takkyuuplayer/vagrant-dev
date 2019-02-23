@@ -20,4 +20,6 @@ Vagrant.configure("2") do |config|
     ansible.playbook = "./ansible/hello.yml"
     ansible.version = "latest"
   end
+
+  config.ssh.forward_agent = true
 end
