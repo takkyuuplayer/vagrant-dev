@@ -3,6 +3,7 @@
   package:
     state: latest
     name: locales
+
 - name: Intall language files
   locale_gen:
     name: "{{ item }}"

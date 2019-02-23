@@ -1,8 +1,7 @@
 ---
 - name: "Install aws cli"
   pip:
-    name: "{{ item }}"
+    name:
+      - awscli
+      - aws-sam-cli
     state: latest
-  loop:
-    - awscli
-    - aws-sam-cli
