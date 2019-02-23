@@ -1,4 +1,5 @@
 ---
 - import_tasks: essential.yml
+- import_tasks: python.yml
 - import_tasks: development.yml
 - import_tasks: locale.yml

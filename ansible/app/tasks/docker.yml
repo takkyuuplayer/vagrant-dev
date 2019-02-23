@@ -1,0 +1,9 @@
+---
+- import_role:
+        name: "geerlingguy.docker"
+- name: "Install ansible-container[docker,k8s]"
+  pip:
+        name:
+              - req
+              - ansible-container[docker,k8s]
+        state: latest
